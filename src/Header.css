@@ -1,0 +1,297 @@
+.dribbble-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: none;
+  background-color: #fff;
+  font-family: "Segoe UI", "Sans-serif";
+  gap: 24px;
+  height: 20px;
+}
+.dribble{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 30px;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000;
+  margin-right: 24px;
+  white-space: nowrap;
+  font-style: italic;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 24px;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 200%;
+  border: none;
+  max-width: 500px; /* Adjust length of the bar */
+  padding: 4px 8px;
+  position: relative;
+  background-color: #fff;
+}
+
+.search-box {
+  position: relative;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.search-dropdown {
+  position: absolute;
+  right: 70px; /* leaves space for the search icon */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
+
+  background: none;       /* remove box-like background */
+  border: none;           /* remove border */
+  padding: 0;             /* remove padding */
+  font-weight: 500;       /* optional: make it stand out */
+  color: #333;            /* optional: adjust color */
+}
+
+.search-box input {
+  width: 100%;
+  height: 30px;
+  padding: 10px 36px 10px 110px;
+  border-radius: 40px;
+  border: 1px solid #ebdbdb;
+  background-color: #f3f3f3;
+  font-size: 14px;
+}
+
+.search-container input {
+  flex: 1;
+  width: 100%;
+  padding-right: 120px; /* Enough space for dropdown and icon */
+  padding-left: 12px;
+  height: 28px;
+  font-size: 16px;
+  border: white;
+  outline: none;
+  background: rgb(255, 247, 247);
+}
+
+.search-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #Ea4c89; /* pink background */
+  border-radius: 50%;        /* makes it circular */
+  padding: 6px;              /* space inside the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.search-icon img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);  /* This makes the icon white */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  list-style: none;
+  padding: 5px 0;
+  width: 100px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+/* Ensure the dropdown content appears in a column layout */
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  z-index: 1;
+  padding: 5px 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block; /* Ensures links are stacked in a column */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Optional: Add a margin to the dropdown items */
+.nav-item {
+  position: relative;
+}
+
+
+nav {
+  display: flex;
+  justify-content: flex-start; /* Aligns items to the left */
+  margin-left: 40px; /* Adds some space from the left */
+  position: relative; /* Ensure the nav element is positioned correctly */
+  z-index: 10; /* Ensures the nav bar is on top of other elements like the search bar */
+  gap: 20px;
+}
+
+nav a {
+  margin-right: 30px; /* Adds space between each link */
+  text-decoration: none; /* Optional: removes underline from links */
+  z-index: 1; /* Ensures the links are on top of the search bar */
+  color: #000;
+}
+
+
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.signup-btn {
+  background: none;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Arrow rotation */
+.arrow {
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+  border: solid #555;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+.arrow.up {
+  transform: rotate(-135deg);
+}
+
+.arrow.down {
+  transform: rotate(45deg);
+}
+
+ 
+
+@media (max-width: 768px) {
+  .dribbble-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000; /* ensure it's visible */
+    padding: 0;
+    display: block;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 auto;
+    color: #000;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+  }
+
+  .signup-btn {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .search-box {
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  .search-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-container input {
+    width: 100%;
+    padding: 10px 36px 10px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

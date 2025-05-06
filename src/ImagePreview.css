@@ -1,0 +1,24 @@
+/* Main video container */
+.image-preview {
+  margin-top: 0; /* Remove any margin from top */
+  padding-top: 0.5rem; /* Reduce top padding */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  position: relative;
+  padding-top: 50px;
+}
+
+/* Style the video itself */
+.image-preview video {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 60%;
+  height: auto;
+  margin-top: 0; /* Ensure no top margin from video */
+  padding-left: 50px;
+}
+
+
+

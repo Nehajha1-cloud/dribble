@@ -1,0 +1,201 @@
+.contact-container {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 40px auto;
+  font-family: sans-serif;
+}
+
+.line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.location-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contact-buttons button {
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-buttons button:first-child {
+  background-color: #000;
+  color: #fff;
+}
+
+.contact-buttons button:last-child {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.footer-videos {
+  margin-top: 50px;
+}
+
+.footer-video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+.view-profile,
+.view-services {
+  color: #0d47a1;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.footer-video-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.video-wrapper {
+  width: calc(25% - 10px);
+  cursor: pointer;
+}
+
+.video-thumb {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.services-section {
+  text-align: left;
+  margin-top: 40px;
+  
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.service-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+.service-details-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+}
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.view-services {
+  font-size: 14px;
+  color: #1a0dab;
+  cursor: pointer;
+}
+
+.service-details {
+  display: flex;
+  align-items: flex-start; /* Align tops of the multi-line text and price */
+  gap: 80px;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 10px;
+}
+
+.service-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.service-price {
+  font-size: 14px;
+  font-weight: 700 !important;
+  white-space: nowrap; /* Keeps it on one line */
+  text-align: right;
+  margin-left: 8px;
+}
+
+.contact-bottom {
+  width: 100%;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+.divider-line {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: #ccc;
+  margin: 30px 0;
+}
+
+.section-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}

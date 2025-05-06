@@ -1,0 +1,44 @@
+.description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 400px;
+    margin-right: 350px;
+    min-height: 50vh; /* Ensure the container takes full screen height */
+    padding: 20px;
+    gap: 10px;
+  }
+  
+  .description-container h1 {
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+  }
+  .description-container p {
+    font-size: 16px;
+    color: #333;
+    max-width: 800px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  .description-container h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .description-container p1 {
+    font-size: 16px;
+    color: #333;
+    max-width: 800px;
+    line-height: 2;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  .description-container img{
+    margin-bottom: 40px;
+  }
+  

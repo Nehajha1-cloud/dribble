@@ -1,0 +1,215 @@
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content from the top */
+  height: 25vh;
+  background-color: #fff;
+  color: #111;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 80px;
+}
+
+/* Heading - No longer centered exactly */
+.title-section h1 {
+  margin-right: 20%;
+  font-size: 26px;
+  margin-bottom: 24px;
+  padding-top: 20px; /* Adjust space above the heading */
+}
+
+/* First row - Location icon large size */
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-right: 350px;
+  margin-bottom: 20px;
+  size: 10px;
+  
+}
+
+.avatar {
+  width: 50px; /* Make the location logo bigger */
+  height: 50px;
+  background-color: black; /* Circular black background */
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.avatar img {
+  width: 10%; /* Make logo smaller to fit inside */
+  height: 10%; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image doesn't stretch */
+  filter: invert(1); /* Try to invert the color to white */
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+
+.available {
+  font-size: 10px;
+  color: #00b894 !important;
+}
+
+.follow {
+  font-size: 10px;
+  color: #ea4c89;
+  cursor: pointer;
+}
+
+.designer-info p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+/* Styling for the interaction buttons container */
+.interaction-buttons {
+  display: flex;
+  justify-content: space-between; /* Positions <p> and <button> groups at opposite sides */
+  align-items: center;
+  margin: 0 50px;
+  width: 70%;
+  max-width: 600px; /* Adjust to control the width of the content */
+  margin-left: 70px;
+  margin-top: -46px; /* Moves the section up */
+  margin-bottom: 0.001rem;
+  font-size: 2px;
+  gap: 20px;
+}
+
+.left-info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.right-actions {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-right: 20px; /* This pushes the right section toward the left */
+  margin-left: 200px;   /* You can tweak this to control how far left it goes */
+  
+}
+
+.logo img {
+  width: 25px;
+  height: 30px;
+}
+
+.get-in-touch {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 999px; /* Pill shape */
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .title-section {
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .title-section h1 {
+    margin: 0 auto 16px auto;
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .location {
+    margin: 0 auto 16px auto;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .avatar img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .info h2 {
+    font-size: 14px;
+  }
+
+  .available, .follow {
+    font-size: 9px;
+  }
+
+  .designer-info p {
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .interaction-buttons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 0 auto;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .left-info,
+  .right-actions {
+    margin: 0;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .right-actions {
+    margin-left: 0;
+  }
+
+  .get-in-touch {
+    width: 100%;
+    max-width: 200px;
+    font-size: 13px;
+    height: 36px;
+  }
+}

@@ -1,0 +1,47 @@
+.scroll-gallery-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  padding: 20px 0;
+}
+
+.scroll-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  width: fit-content;
+}
+
+.gallery-item {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 240px; /* Adjust as needed */
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.gallery-item p {
+  margin: 4px 0 0 0;
+  font-size: 12px;         /* Smaller font size */
+  text-align: left;        /* Align to the left */
+  padding-left: 4px;       /* Small padding from image edge */
+  font-weight: normal;     /* Make sure it's not bold */
+  color: #333;
+}
+
+/* Auto-scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
