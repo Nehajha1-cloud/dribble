@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/dribble/static/css/main.ada40ca5.css",
+    "main.js": "/dribble/static/js/main.ad328c29.js",
+    "static/js/453.86aec921.chunk.js": "/dribble/static/js/453.86aec921.chunk.js",
+    "static/media/Xurya.mp4": "/dribble/static/media/Xurya.a722a1ce5d1f9d649016.mp4",
+    "static/media/versa.mp4": "/dribble/static/media/versa.e05246fea7b27cb728b7.mp4",
+    "static/media/Constructopia.mp4": "/dribble/static/media/Constructopia.56945a6fcce2453b6544.mp4",
+    "static/media/forgeX.mp4": "/dribble/static/media/forgeX.4d2c60b54d48cc1d5157.mp4",
+    "static/media/prodmast.mp4": "/dribble/static/media/prodmast.42b7b5f2747cad1e36b3.mp4",
+    "static/media/videoImg.webp": "/dribble/static/media/videoImg.ff337cfa8b09eff74c39.webp",
+    "static/media/signUp.webp": "/dribble/static/media/signUp.fa265e36f578d647579d.webp",
+    "static/media/valmax.webp": "/dribble/static/media/valmax.3a3826db62b6aa5ff2d3.webp",
+    "static/media/Awsmd.webp": "/dribble/static/media/Awsmd.491c9e07c2cc07abcc25.webp",
+    "static/media/Halo.webp": "/dribble/static/media/Halo.06a53c45986a241a29ac.webp",
+    "static/media/Xurya.webp": "/dribble/static/media/Xurya.619846d8c1c79a3d47e9.webp",
+    "static/media/const.webp": "/dribble/static/media/const.496e79214b8ead3d0b06.webp",
+    "static/media/forgeX.webp": "/dribble/static/media/forgeX.dcb44bb83ab7ec02dba0.webp",
+    "static/media/Guide.webp": "/dribble/static/media/Guide.c69eff62b99e99013efa.webp",
+    "static/media/versa.webp": "/dribble/static/media/versa.bc627a2b87867ff82600.webp",
+    "static/media/Typography.webp": "/dribble/static/media/Typography.347c1410d3c2cbb07cf2.webp",
+    "static/media/Print.webp": "/dribble/static/media/Print.1efa6476d8e8f30d2b77.webp",
+    "static/media/lepisov.webp": "/dribble/static/media/lepisov.fb55d844005d999a515f.webp",
+    "static/media/landingPage.webp": "/dribble/static/media/landingPage.a791cd57886e4ce5063c.webp",
+    "static/media/mobile.webp": "/dribble/static/media/mobile.8c527f6987e49ce21017.webp",
+    "static/media/Type08.webp": "/dribble/static/media/Type08.845663f19aefff30c53d.webp",
+    "static/media/webDesign.webp": "/dribble/static/media/webDesign.0b25c3daf440a25d476f.webp",
+    "static/media/Illustration.webp": "/dribble/static/media/Illustration.6c3852292d40ddadc9bb.webp",
+    "static/media/productDesign.webp": "/dribble/static/media/productDesign.5fb31a4f0a1ad83ccb2d.webp",
+    "static/media/location.webp": "/dribble/static/media/location.a8f0b34ca2f33ccefcd6.webp",
+    "static/media/Animation.webp": "/dribble/static/media/Animation.49a5d44886db8726be8c.webp",
+    "static/media/location1.webp": "/dribble/static/media/location1.18446aa7b8a31c41a049.webp",
+    "static/media/Branding1.webp": "/dribble/static/media/Branding1.02dd2ceff1bc6f231637.webp",
+    "index.html": "/dribble/index.html",
+    "main.ada40ca5.css.map": "/dribble/static/css/main.ada40ca5.css.map",
+    "main.ad328c29.js.map": "/dribble/static/js/main.ad328c29.js.map",
+    "453.86aec921.chunk.js.map": "/dribble/static/js/453.86aec921.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ada40ca5.css",
+    "static/js/main.ad328c29.js"
+  ]
+}
