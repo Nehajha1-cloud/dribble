@@ -1,297 +1,303 @@
-.dribbble-header {
+/* Full-width header */
+.header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 32px;
-  border-bottom: none;
-  background-color: #fff;
-  font-family: "Segoe UI", "Sans-serif";
-  gap: 24px;
-  height: 20px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+  gap: 50px;
+  background: #fff;
 }
-.dribble{
-  font-weight: bold;
-  font-style: italic;
-  font-size: 30px;
-}
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+
+/* Logo */
+.logo1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 26px;
   color: #000;
-  margin-right: 24px;
-  white-space: nowrap;
-  font-style: italic;
+}
+.logo1:hover{
+  color: #6f6868;
 }
 
-.header-center {
-  display: flex;
-  align-items: center;
+/* Search Section */
+.search-section {
   flex: 1;
-  gap: 24px;
-}
-.search-container {
   display: flex;
-  align-items: center;
-  width: 200%;
-  border: none;
-  max-width: 500px; /* Adjust length of the bar */
-  padding: 4px 8px;
-  position: relative;
-  background-color: #fff;
-}
-
-.search-box {
-  position: relative;
-  width: 400px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.search-dropdown {
-  position: absolute;
-  right: 70px; /* leaves space for the search icon */
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  z-index: 1;
-
-  background: none;       /* remove box-like background */
-  border: none;           /* remove border */
-  padding: 0;             /* remove padding */
-  font-weight: 500;       /* optional: make it stand out */
-  color: #333;            /* optional: adjust color */
-}
-
-.search-box input {
-  width: 100%;
-  height: 30px;
-  padding: 10px 36px 10px 110px;
-  border-radius: 40px;
-  border: 1px solid #ebdbdb;
-  background-color: #f3f3f3;
-  font-size: 14px;
-}
-
-.search-container input {
-  flex: 1;
-  width: 100%;
-  padding-right: 120px; /* Enough space for dropdown and icon */
-  padding-left: 12px;
-  height: 28px;
-  font-size: 16px;
-  border: white;
-  outline: none;
-  background: rgb(255, 247, 247);
-}
-
-.search-icon {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #Ea4c89; /* pink background */
-  border-radius: 50%;        /* makes it circular */
-  padding: 6px;              /* space inside the circle */
-  display: flex;
-  align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  color: white;
+  margin-right: 120px;
 }
 
-.search-icon img {
-  width: 16px;
-  height: 16px;
-  filter: brightness(0) invert(1);  /* This makes the icon white */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f4;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent; /* default state */
+  border-radius: 999px;
+  padding: 6px 12px;
+  max-width: 700px;
+  width: 100%;
+  gap: 12px;
+}
+.search-wrapper:hover {
+  background-color: #ffffff; /* turns white on hover */
+  border: 2px solid #ccc;            /* light gray border on hover */
+  box-shadow: 0 0 0 2px #ccc;        /* optional for extra visibility */
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #0d0c22;
+  position: relative;
+}
+.dropdown-toggle:hover{
+  color: #414144;
+}
+
+.arrow {
+  font-size: 10px;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg); /* Arrow flips on hover */
 }
 
 .dropdown-menu {
+  display: none;
   position: absolute;
-  top: 40px;
-  left: 20px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  list-style: none;
-  padding: 5px 0;
-  width: 100px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-
-/* Ensure the dropdown content appears in a column layout */
-.dropdown-content {
-  display: block;
-  position: absolute;
+  top: 120%;
+  left: 0;
   background-color: white;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  min-width: 160px;
-  z-index: 1;
-  padding: 5px 0;
+  border: 1px solid #e1e1e1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+  min-width: 180px;
+  z-index: 1000;
+  flex-direction: column;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 8px 16px;
-  text-decoration: none;
-  display: block; /* Ensures links are stacked in a column */
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Optional: Add a margin to the dropdown items */
-.nav-item {
-  position: relative;
-}
-
-
-nav {
+.dropdown:hover .dropdown-menu {
   display: flex;
-  justify-content: flex-start; /* Aligns items to the left */
-  margin-left: 40px; /* Adds some space from the left */
-  position: relative; /* Ensure the nav element is positioned correctly */
-  z-index: 10; /* Ensures the nav bar is on top of other elements like the search bar */
-  gap: 20px;
 }
 
-nav a {
-  margin-right: 30px; /* Adds space between each link */
-  text-decoration: none; /* Optional: removes underline from links */
-  z-index: 1; /* Ensures the links are on top of the search bar */
-  color: #000;
+.dropdown-menu a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #0d0c22;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+  color: #ea4c89;
+}
+
+.dropdown-menu.wide {
+  min-width: 240px;
 }
 
 
-
-.header-right {
+.search-icon {
+  background-size: 16px;
+  background-color: #ea4c89;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.search-icon:hover{
+  background-color: #ea81a9;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-right: 100px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0d0c22;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
   gap: 12px;
+  align-items: center;
 }
 
-.signup-btn {
-  background: none;
-  border: none;
+.signup-link:hover {
+  color: #686262;
+}
+.signup-link {
+  text-decoration: none;
+  color: #0d0c22;
   font-weight: 500;
   font-size: 14px;
-  cursor: pointer;
 }
 
+.login-btn:hover {
+  background-color: #686262;
+}
 .login-btn {
-  background-color: #000;
-  color: #fff;
+  background-color: #0d0c22;
+  color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 24px;
-  font-weight: 500;
+  border-radius: 999px;
+  padding: 8px 18px;
   font-size: 14px;
   cursor: pointer;
 }
 
-/* Arrow rotation */
-.arrow {
-  display: inline-block;
-  margin-left: 4px;
-  transition: transform 0.3s ease;
-  border: solid #555;
-  border-width: 0 2px 2px 0;
-  padding: 3px;
-  transform: rotate(45deg);
+/* Base state - hidden toggle elements */
+.nav-toggle,
+.hamburger,
+.close-icon {
+  display: none;
 }
 
-.arrow.up {
-  transform: rotate(-135deg);
-}
-
-.arrow.down {
-  transform: rotate(45deg);
-}
-
- 
-
+/* Mobile styles */
 @media (max-width: 768px) {
-  .dribbble-header {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 12px;
-    gap: 8px;
-  }
-
-  .top-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  /* Hamburger and close icons */
+  .hamburger,
+  .close-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
   }
 
   .hamburger {
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #000; /* ensure it's visible */
-    padding: 0;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: none;
+  }
+
+  /* Hide nav and auth by default on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    border-top: 1px solid #eee;
+  }
+
+/* Only show login button on mobile */
+.auth-buttons {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
+
+.auth-buttons .signup-link {
+  display: none !important;
+}
+
+.signup-link {
+  display: none; /* Hide Sign up on mobile */
+}
+
+.login-btn {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+/* Show sign up only when nav is expanded */
+.nav-toggle:checked ~ .auth-buttons .signup-link {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+
+  /* Show nav & auth when checkbox is checked */
+  .nav-toggle:checked ~ .nav-links,
+  .nav-toggle:checked ~ .auth-buttons {
+    display: flex;
+  }
+
+  /* Show close icon, hide hamburger when menu is open */
+  .nav-toggle:checked ~ .hamburger {
+    display: none;
+  }
+
+  .nav-toggle:checked ~ .close-icon {
     display: block;
   }
 
-  .logo {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin: 0 auto;
-    color: #000;
-  }
-
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    position: absolute;
-    right: 16px;
-    top: 12px;
-  }
-
-  .signup-btn {
-    display: none;
-  }
-
-  .desktop-nav {
-    display: none;
-  }
-
-  .search-box {
-    width: 100%;
-    padding: 0 8px;
-  }
-
-  .search-container {
-    position: relative;
-    width: 100%;
-  }
-
-  .search-container input {
-    width: 100%;
-    padding: 10px 36px 10px 12px;
-    font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-
-  .search-icon {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-  }
-
-  .mobile-nav {
-    display: flex;
+  /* Adjust header layout */
+  .header {
     flex-direction: column;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 0;
+    padding: 16px;
+    position: relative;
+  }
+
+  .logo1 {
+    margin-left: 48px; /* keep logo visible beside toggle */
+  }
+
+  .search-section {
+    order: 2;
+    width: 100%;
+    margin: 20px 0;
+    justify-content: flex-start;
+  }
+
+  .search-wrapper {
+    max-width: 100%;
   }
 }

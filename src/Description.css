@@ -42,3 +42,28 @@
     margin-bottom: 40px;
   }
   
+
+  @media (max-width: 768px) {
+    .description-container {
+      padding: 16px;
+      margin: 0 20px;
+      max-width: 100%;
+      gap: 16px;
+    }
+  
+    .description-container h1,
+    .description-container h2 {
+      font-size: 22px;
+    }
+  
+    .description-container p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  
+    .description-container .image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  

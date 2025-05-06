@@ -90,7 +90,7 @@ const ContactSection = () => {
   <div className="service-item">
     <img src={landingPage} alt="Service Preview" className="service-img" />
     <div className="service-details">
-      <p className="service-title">Landing Page Design & <br /> Development</p>
+      <p className="service-title">Landing Page Design & <br className='line-break' /> Development</p>
       <p className="service-price">$3,000</p>
     </div>
   </div>

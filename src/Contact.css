@@ -158,7 +158,7 @@
 
 .service-price {
   font-size: 14px;
-  font-weight: 700 !important;
+  font-weight: 200 !important;
   white-space: nowrap; /* Keeps it on one line */
   text-align: right;
   margin-left: 8px;
@@ -198,4 +198,108 @@
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+  .footer-video-row {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .video-wrapper {
+    width: 100%;
+  }
+
+  .video-thumb {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .footer-video-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .services-section {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+
+  .service-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .service-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 10px;
+    gap: 0; /* or just remove this line */
+  }
+  
+  .service-title {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: normal; /* Allow wrapping if needed */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .service-price {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px; /* Tighten space between title and price */
+  }
+  
+  .line-break {
+    display: none;
+  }
+  
+  
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-bottom {
+    padding: 20px;
+  }
+
+  .section-heading {
+    text-align: center;
+  }
+
+  .divider-line {
+    width: 90vw;
+  }
+
+
+  .bottom {
+    align-items: flex-start;
+  }
+
+  .section-heading {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+    align-self: center;
+  }
+
+  .image-grid img {
+    width: 100%;
+    height: auto;
+  }
 }

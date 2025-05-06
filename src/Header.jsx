@@ -1,116 +1,78 @@
-import React, { useState } from "react";
-import "./Header.css";
+import React from "react";
+import './Header.css'; 
 import Search from './public/logo/search.png';
 
 function Header() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("Shots");
-  const [navDropdownOpen, setNavDropdownOpen] = useState({
-    explore: false,
-    hire: false,
-    mobile: false,
-  });
-
-  const options = ["Shots", "Designers", "Services"];
-  const exploreOptions = ["Option 1", "Option 2", "Option 3"];
-  const hireOptions = ["Option 1", "Option 2", "Option 3"];
-
-  const toggleDropdown = (dropdown) => {
-    setNavDropdownOpen((prevState) => ({
-      ...prevState,
-      [dropdown]: !prevState[dropdown],
-    }));
-  };
-
   return (
-    <header className="dribbble-header">
-<div className="dribble">Dribble</div>
+    <header className="header">
+      {/* Hamburger for mobile */}
+      <button className="hamburger">☰</button>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+<label for="nav-toggle" class="hamburger">&#9776;</label>
+<label for="nav-toggle" class="close-icon">✕</label>
 
-      <div className="header-center">
-        <div className="search-box">
-          <div className="search-container">
-            <div
-              className="search-dropdown"
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-            >
-              {selectedOption} {" "}
-              <span className={`arrow ${dropdownOpen ? "up" : "down"}`}></span>
+      {/* Logo */}
+      <div className="logo1">Dribbble</div>
+
+      {/* Search */}
+      <div className="search-section">
+        <div className="search-wrapper">
+          <input className="search-input" type="text" placeholder="What are you looking for?" />
+          <div className="dropdown">
+            <div className="dropdown-toggle">
+              Shots <span className="arrow">&#9650;</span>
             </div>
-
-            <input
-              type="text"
-              placeholder="What are you looking for?"
-              aria-label="Search"
-            />
-            <span className="search-icon">
-              <img src={Search} alt="Search" />
-            </span>
-
-            {dropdownOpen && (
-              <ul className="dropdown-menu">
-                {options.map((opt) => (
-                  <li
-                    key={opt}
-                    onClick={() => {
-                      setSelectedOption(opt);
-                      setDropdownOpen(false);
-                    }}
-                  >
-                    {opt}
-                  </li>
-                ))}
-              </ul>
-            )}
+            <div className="dropdown-menu">
+              <a href="#">Shots</a>
+              <a href="#">Designers</a>
+              <a href="#">Services</a>
+            </div>
           </div>
+          <div className="search-icon"><img src={Search} alt="search" /></div>
         </div>
-
-        {/* Desktop Navigation */}
-        <nav className="desktop-nav">
-          <div className="nav-item" onClick={() => toggleDropdown("explore")}>
-            Explore
-            <span className={`arrow ${dropdownOpen ? "up" : "down"}`}></span>
-            {navDropdownOpen.explore && (
-              <div className="dropdown-content">
-                {exploreOptions.map((opt) => (
-                  <a href="#" key={opt}>
-                    {opt}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <div className="nav-item" onClick={() => toggleDropdown("hire")}>
-            Hire a Designer
-            <span className={`arrow ${dropdownOpen ? "up" : "down"}`}></span>
-            {navDropdownOpen.hire && (
-              <div className="dropdown-content">
-                {hireOptions.map((opt) => (
-                  <a href="#" key={opt}>
-                    {opt}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <a href="#">Find Jobs</a>
-          <a href="#">Blog</a>
-        </nav>
       </div>
 
-      {/* Mobile Nav Menu */}
-      {navDropdownOpen.mobile && (
-        <nav className="mobile-nav">
-          <a href="#">Explore</a>
-          <a href="#">Hire a Designer</a>
-          <a href="#">Find Jobs</a>
-          <a href="#">Blog</a>
-        </nav>
-      )}
+      {/* Navigation Links (hidden on mobile) */}
+      <nav className="nav-links">
+        <a href="#">
+          <div className="dropdown">
+            <div className="dropdown-toggle">
+              Explore <span className="arrow">&#9650;</span>
+            </div>
+            <div className="dropdown-menu wide">
+              <a href="#">🔥 Popular</a>
+              <a href="#">✨ New and Noteworthy</a>
+              <a href="#">Product Design</a>
+              <a href="#">Web Design</a>
+              <a href="#">Animation</a>
+              <a href="#">Branding</a>
+              <a href="#">Illustration</a>
+              <a href="#">Mobile</a>
+              <a href="#">Typography</a>
+              <a href="#">Print</a>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div className="dropdown">
+            <div className="dropdown-toggle">
+              Hire a Designer <span className="arrow">&#9650;</span>
+            </div>
+            <div className="dropdown-menu icon-menu">
+              <a href="#"><span className="icon">🔍</span> Browse Freelancers</a>
+              <a href="#"><span className="icon">🛒</span> Purchase Services</a>
+              <a href="#"><span className="icon">📝</span> Submit a Project Brief</a>
+              <a href="#"><span className="icon">📄</span> Post a Full-Time Job</a>
+            </div>
+          </div>
+        </a>
+        <a href="#">Find Jobs</a>
+        <a href="#">Blog</a>
+      </nav>
 
-      <div className="header-right">
-        <button className="signup-btn">Sign up</button>
+      {/* Auth Buttons */}
+      <div className="auth-buttons">
+        <a href="#" className="signup-link">Sign up</a>
         <button className="login-btn">Log in</button>
       </div>
     </header>
@@ -118,3 +80,6 @@ function Header() {
 }
 
 export default Header;
+
+
+

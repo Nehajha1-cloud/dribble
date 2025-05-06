@@ -29,9 +29,9 @@ function TitleSection() {
   </div>
 
   <div className="right-actions">
-    <p className="logo"><img src={Like} alt="Heart" /></p>
-    <p className="logo"><img src={Save} alt="Heart" /></p>
-    <p className="logo"><img src={Calander} alt="Heart" /></p>
+    <p className="icon"><img src={Like}/></p>
+    <p className="icon"><img src={Save}/></p>
+    <p className="icon"><img src={Calander}/></p>
     <button className="get-in-touch">Get in touch</button>
   </div>
       </div>
