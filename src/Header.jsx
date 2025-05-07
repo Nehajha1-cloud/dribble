@@ -1,15 +1,18 @@
-import React from "react";
-import './Header.css'; 
+import React, { useState } from "react";
+import './Header.css';
 import Search from './public/logo/search.png';
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <header className="header">
-      {/* Hamburger for mobile */}
-      <button className="hamburger">☰</button>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-<label for="nav-toggle" class="hamburger">&#9776;</label>
-<label for="nav-toggle" class="close-icon">✕</label>
+      {/* Hamburger / Close Icon */}
+      <button className="hamburger" onClick={toggleMenu}>
+        {menuOpen ? '✕' : '☰'}
+      </button>
 
       {/* Logo */}
       <div className="logo1">Dribbble</div>
@@ -32,8 +35,8 @@ function Header() {
         </div>
       </div>
 
-      {/* Navigation Links (hidden on mobile) */}
-      <nav className="nav-links">
+      {/* Navigation Links */}
+      <nav className={`nav-links ${menuOpen ? 'show' : ''}`}>
         <a href="#">
           <div className="dropdown">
             <div className="dropdown-toggle">
@@ -71,7 +74,7 @@ function Header() {
       </nav>
 
       {/* Auth Buttons */}
-      <div className="auth-buttons">
+      <div className={`auth-buttons ${menuOpen ? 'show' : ''}`}>
         <a href="#" className="signup-link">Sign up</a>
         <button className="login-btn">Log in</button>
       </div>
@@ -80,6 +83,3 @@ function Header() {
 }
 
 export default Header;
-
-
-

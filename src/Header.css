@@ -193,92 +193,21 @@
   display: none;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
-  /* Hamburger and close icons */
-  .hamburger,
-  .close-icon {
+  /* Hamburger button */
+  .hamburger {
     display: block;
     font-size: 24px;
+    background: none;
+    border: none;
     cursor: pointer;
-    z-index: 1001;
-  }
-
-  .hamburger {
+    z-index: 1001;  /* Ensure it’s above other content */
     position: absolute;
     top: 16px;
     left: 16px;
   }
 
-  .close-icon {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    display: none;
-  }
-
-  /* Hide nav and auth by default on mobile */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    background: #fff;
-    padding: 20px;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    z-index: 1000;
-    border-top: 1px solid #eee;
-  }
-
-/* Only show login button on mobile */
-.auth-buttons {
-  position: absolute;
-  right: 16px;
-  top: 12px;
-  display: flex;
-  align-items: center;
-  z-index: 1001;
-}
-
-.auth-buttons .signup-link {
-  display: none !important;
-}
-
-.signup-link {
-  display: none; /* Hide Sign up on mobile */
-}
-
-.login-btn {
-  display: inline-block;
-  padding: 6px 14px;
-  font-size: 14px;
-}
-
-/* Show sign up only when nav is expanded */
-.nav-toggle:checked ~ .auth-buttons .signup-link {
-  display: inline-block;
-  margin-top: 12px;
-}
-
-
-  /* Show nav & auth when checkbox is checked */
-  .nav-toggle:checked ~ .nav-links,
-  .nav-toggle:checked ~ .auth-buttons {
-    display: flex;
-  }
-
-  /* Show close icon, hide hamburger when menu is open */
-  .nav-toggle:checked ~ .hamburger {
-    display: none;
-  }
-
-  .nav-toggle:checked ~ .close-icon {
-    display: block;
-  }
-
-  /* Adjust header layout */
+  /* Adjust header layout for smaller screens */
   .header {
     flex-direction: column;
     align-items: flex-start;
@@ -287,10 +216,12 @@
     position: relative;
   }
 
+  /* Position logo beside hamburger */
   .logo1 {
-    margin-left: 48px; /* keep logo visible beside toggle */
+    margin-left: 38px;
   }
 
+  /* Search layout on mobile */
   .search-section {
     order: 2;
     width: 100%;
@@ -300,5 +231,88 @@
 
   .search-wrapper {
     max-width: 100%;
+  }
+
+  /* Hamburger menu - Initially hidden offscreen */
+  .nav-links {
+    display: flex;  /* Hidden by default */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 250px;  /* Width of the slide-out menu */
+    background: #fff;
+    padding: 20px;
+    position: fixed;  /* Fixed to the left */
+    top: 0;
+    left: -250px;  /* Start hidden off-screen */
+    z-index: 1000;
+    height: auto;  /* Adjust the height based on the content */
+    box-sizing: border-box;
+    transition: left 0.3s ease;  /* Smooth transition */
+  }
+
+  /* Show the nav when the 'show' class is added */
+  .nav-links.show {
+    display: flex;
+    left: 0;  /* Slide in the menu */
+  }
+
+  /* List items inside the hamburger menu */
+  .nav-links ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style-type: none;  /* Remove bullet points */
+  }
+
+  .nav-links li {
+    text-align: center;  /* Center links inside the menu */
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;  /* Separator between items */
+  }
+
+  /* Auth buttons (Login, Signup) for mobile */
+  .auth-buttons {
+    display: flex;  /* Initially hidden */
+    flex-direction: column;
+    align-items: flex-end;
+    width: 110%;
+    padding: 0 40px 20px;
+    position: fixed;
+    top: 12px;  /* Below nav-links */
+    left: 0;
+    z-index: 999;
+  }
+
+  .nav-links.show
+   {
+    display: flex;
+    left: 100px;
+    top: 90px;
+  }
+
+  /* Hide signup link in collapsed state */
+  .signup-link {
+    display: none;
+  }
+
+  /* Make signup visible only inside the hamburger menu when expanded */
+  .nav-links.show .signup-link {
+    display: grid;
+    margin-top: 12px;
+  }
+
+  /* Make login button visible in header */
+  .login-btn {
+    display: flex;
+    padding: 6px 14px;
+    font-size: 14px;
+    position: fixed;
+    top: 40px;
+    right: 20px;
+  }
+
+  /* Hide login button inside the hamburger menu */
+  .auth-buttons.show .login-btn {
+    display: flex;
   }
 }
